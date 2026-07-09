@@ -43,7 +43,7 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
                     sh '''
                     mvn sonar:sonar \
-                    -Dsonar.host.url=http://docker.internal \
+                    -Dsonar.host.url=http://lochalhost:9000 \
                     -Dsonar.projectKey=student-app-jar \
                     -Dsonar.projectName=student-app
                     '''
